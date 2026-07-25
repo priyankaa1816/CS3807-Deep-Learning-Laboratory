@@ -12,10 +12,13 @@ These tasks were implemented to gain a better understanding of the **Perceptron 
 additional-tasks-exp-01-02/
 │
 ├── figures/
-│   ├── and_gate.eps
-│   ├── or_gate.eps
-│   ├── not_gate.eps
-│   └── xor_gate.eps
+│   ├── basic_gates/
+│   │   ├── and_gate.eps
+│   │   ├── or_gate.eps
+│   │   └── not_gate.eps
+│   │
+│   └── xor_gates/
+│       └── xor_gate.eps
 │
 ├── notebook/
 │   └── Additional_Tasks_Gates.ipynb
