@@ -2,7 +2,6 @@
 
 ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)
 ![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-FF6F00?logo=tensorflow&logoColor=white)
 ![License](https://img.shields.io/badge/License-Academic-blue)
 
 A collection of laboratory experiments, Python implementations, reports, and supporting resources completed as part of the **CS3807 – Deep Learning Laboratory** course at **Shiv Nadar University Chennai**.
