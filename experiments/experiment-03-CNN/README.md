@@ -89,14 +89,31 @@ Studied the effect of different stride and padding values on the output feature 
 
 ```text
 Output = floor((N - F + 2P) / S) + 1
+```
 
 where:
-- N = Input size
-- F = Filter size
-- P = Padding
-- S = Stride
 
-Task 4 – Feature Map Visualization
+- `N` = Input size
+- `F` = Filter size
+- `P` = Padding
+- `S` = Stride
+
+### Examples
+
+```text
+32 × 32, 3 × 3 kernel, stride 1, VALID
+→ 30 × 30
+
+32 × 32, 3 × 3 kernel, stride 1, SAME
+→ 32 × 32
+
+32 × 32, stride 2, SAME
+→ 16 × 16
+```
+
+---
+
+## Task 4 – Feature Map Visualization
 
 Visualized eight feature maps after the first convolution layer.
 
@@ -104,33 +121,42 @@ A feature map represents the activation produced by a particular filter. It show
 
 Different filters learn different visual patterns, so each filter produces a different feature map.
 
-Task 5 – Max Pooling vs Average Pooling
+---
+
+## Task 5 – Max Pooling vs Average Pooling
 
 Compared Max Pooling and Average Pooling using the same CNN structure.
 
-Max Pooling
+### Max Pooling
 
 Selects the maximum value from each pooling window and preserves the strongest activation.
 
-Average Pooling
+### Average Pooling
 
 Calculates the average value of each pooling window.
 
 Both produced the same output size:
 
+```text
 16 × 16 × 16
+```
 
-Results
-Pooling Method	Test Accuracy
-Max Pooling	58.51%
-Average Pooling	57.80%
+### Results
+
+| Pooling Method | Test Accuracy |
+|----------------|---------------|
+| Max Pooling | 58.51% |
+| Average Pooling | 57.80% |
 
 Max Pooling performed slightly better in this experiment.
 
-Task 6 – CNN Construction and Training
+---
+
+## Task 6 – CNN Construction and Training
 
 The CNN architecture used was:
 
+```text
 Input (32 × 32 × 3)
         ↓
 Conv2D (32 filters, 3 × 3)
@@ -152,7 +178,11 @@ Dense (128 neurons)
 Dense (10 neurons)
         ↓
 Softmax
-Layer Output Sizes
+```
+
+### Layer Output Sizes
+
+```text
 Input       : 32 × 32 × 3
 Conv2D      : 32 × 32 × 32
 Max Pooling : 16 × 16 × 32
@@ -161,65 +191,91 @@ Max Pooling : 8 × 8 × 64
 Flatten     : 4096
 Dense       : 128
 Output      : 10
-Training Configuration
-Optimizer: Adam
-Epochs: 20
-Batch Size: 32
-Parameter Calculation
+```
+
+### Training Configuration
+
+- Optimizer: Adam
+- Epochs: 20
+- Batch Size: 32
+
+### Parameter Calculation
 
 First convolution layer:
 
+```text
 (3 × 3 × 3 + 1) × 32 = 896
+```
 
 Second convolution layer:
 
+```text
 (3 × 3 × 32 + 1) × 64 = 18,496
+```
 
 Dense layer:
 
+```text
 4096 × 128 + 128 = 524,416
+```
 
 Output layer:
 
+```text
 128 × 10 + 10 = 1,290
+```
 
 Total parameters:
 
+```text
 896 + 18,496 + 524,416 + 1,290
 = 545,098
-Training Results
+```
+
+---
+
+## Training Results
 
 The model achieved approximately 96.94% training accuracy by the final epoch.
 
 The best validation accuracy was approximately 70.86% around epoch 8.
 
-The training accuracy continued increasing while validation accuracy stopped improving and validation loss increased. This indicates that the model was overfitting the training data.
+The training accuracy continued increasing while validation accuracy stopped improving and validation loss increased. This indicates that the model was **overfitting** the training data.
 
-Task 7 – Model Evaluation
+---
+
+## Task 7 – Model Evaluation
 
 The trained CNN was evaluated using the CIFAR-10 test dataset.
 
-Overall Results
-Metric	Result
-Accuracy	68.28%
-Precision	0.6876
-Recall	0.6828
-F1-Score	0.6834
-Classification Report
-Class	Precision	Recall	F1-Score
-Airplane	0.69	0.77	0.73
-Automobile	0.81	0.83	0.82
-Bird	0.55	0.56	0.56
-Cat	0.47	0.54	0.50
-Deer	0.69	0.55	0.61
-Dog	0.58	0.58	0.58
-Frog	0.79	0.71	0.74
-Horse	0.77	0.68	0.72
-Ship	0.79	0.80	0.80
-Truck	0.75	0.81	0.77
+### Overall Results
 
-The model performed best on the Automobile class with an F1-score of 0.82 and had the most difficulty with the Cat class, which had an F1-score of 0.50.
+| Metric | Result |
+|--------|--------|
+| Accuracy | 68.28% |
+| Precision | 0.6876 |
+| Recall | 0.6828 |
+| F1-Score | 0.6834 |
 
-Conclusion
+### Classification Report
+
+| Class | Precision | Recall | F1-Score |
+|-------|-----------|--------|----------|
+| Airplane | 0.69 | 0.77 | 0.73 |
+| Automobile | 0.81 | 0.83 | 0.82 |
+| Bird | 0.55 | 0.56 | 0.56 |
+| Cat | 0.47 | 0.54 | 0.50 |
+| Deer | 0.69 | 0.55 | 0.61 |
+| Dog | 0.58 | 0.58 | 0.58 |
+| Frog | 0.79 | 0.71 | 0.74 |
+| Horse | 0.77 | 0.68 | 0.72 |
+| Ship | 0.79 | 0.80 | 0.80 |
+| Truck | 0.75 | 0.81 | 0.77 |
+
+The model performed best on the **Automobile** class with an F1-score of 0.82 and had the most difficulty with the **Cat** class, which had an F1-score of 0.50.
+
+---
+
+## Conclusion
 
 A CNN was successfully implemented for CIFAR-10 image classification. The experiment demonstrated convolution, feature extraction, pooling, CNN architecture, parameter calculation, training, and evaluation. The final model achieved 68.28% test accuracy and showed clear signs of overfitting.
