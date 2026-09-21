@@ -1,4 +1,3 @@
-```markdown
 # Experiment 05: Comprehensive Study of CNN Training and Optimization
 
 Comprehensive study of **CNN training**, **regularization**, **optimization**, **hyperparameter tuning**, **transfer learning**, **fine-tuning**, and **5-Fold Cross-Validation** using the **Oxford-IIIT Pet Dataset** with TensorFlow/Keras.
