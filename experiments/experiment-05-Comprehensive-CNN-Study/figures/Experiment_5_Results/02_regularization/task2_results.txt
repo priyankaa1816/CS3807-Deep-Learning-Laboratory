@@ -1,0 +1,5 @@
+      Configuration  Final Training Loss  Final Validation Loss  Best Validation Accuracy  Epoch of Best Val. Accuracy  Training Time (s)  Max Train-Val Accuracy Gap
+  No Regularization             0.049755               0.272953                  0.907609                            5          48.710016                    0.093750
+  L2 Regularization             0.067035               0.295055                  0.908967                            8          49.130982                    0.090014
+            Dropout             0.135322               0.292516                  0.903533                            6          48.861560                    0.063519
+Batch Normalization             0.025467               0.335941                  0.896739                            8          48.918926                    0.109035

@@ -1,0 +1,8 @@
+Batch Normalization -- Numerical Example
+Input x           : [2.0, 4.0, 6.0, 8.0]
+Mean              : 5.0
+Variance          : 5.0
+Std deviation     : 2.23606797749979
+Normalized (x_hat): [-1.3415, -0.4472, 0.4472, 1.3415]
+gamma=1.0, beta=0.0
+Output y          : [-1.3415, -0.4472, 0.4472, 1.3415]

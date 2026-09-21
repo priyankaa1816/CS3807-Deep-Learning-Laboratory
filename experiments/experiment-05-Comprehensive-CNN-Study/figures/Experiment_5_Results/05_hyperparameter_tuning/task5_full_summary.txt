@@ -1,0 +1,13 @@
+Best learning rate: 0.001
+Best batch size: 32
+Best dropout: 0.5
+Best optimizer (SGD vs Adam): adam
+Best fine-tune LR: 0.0001
+Best fine-tuning strategy: frozen_backbone
+                    best_validation_accuracy  training_time_seconds               sweep
+sgd                                 0.885870              48.384474    optimizer_choice
+adam                                0.904891              48.960891    optimizer_choice
+0.0001                              0.907609              62.981636        fine_tune_lr
+0.00001                             0.831522              62.766814        fine_tune_lr
+frozen_backbone                     0.902174              48.741604  fine_tune_strategy
+partial_unfreezing                  0.899457              63.357598  fine_tune_strategy

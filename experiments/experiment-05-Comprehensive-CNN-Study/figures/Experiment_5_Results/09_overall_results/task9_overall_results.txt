@@ -1,0 +1,9 @@
+          Configuration CV Accuracy                 SD Test Accuracy Training Time (s)
+            1. Baseline      0.9141             0.0061        0.9032              44.0
+ 2. Best Initialization     0.9212* N/A (Single Split)           N/A              56.6
+ 3. Best Regularization     0.9090* N/A (Single Split)           N/A              49.1
+      4. Best Optimizer     0.9062* N/A (Single Split)           N/A              48.6
+5. Best Hyperparameters      0.9096             0.0102           N/A              39.4
+    6. Fine-Tuned Model      0.8869             0.0114           N/A              52.5
+
+Provenance: Configurations 1, 5 and 6 report 5-fold CV mean accuracy and SD. Configurations 2, 3 and 4 report single-split validation accuracy. Only 1. Baseline was evaluated on the independent test set.

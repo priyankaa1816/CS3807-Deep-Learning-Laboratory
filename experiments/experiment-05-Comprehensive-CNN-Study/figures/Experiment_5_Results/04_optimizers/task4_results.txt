@@ -1,0 +1,5 @@
+Configuration  Final Training Loss  Final Validation Loss  Best Validation Accuracy  Epoch of Best Val. Accuracy  Training Time (s)
+          SGD             0.353032               0.459033                  0.889946                            8          47.933113
+     Momentum             0.056625               0.279930                  0.906250                            7          48.553050
+      RMSprop             0.034132               0.292600                  0.906250                            4          48.691137
+         Adam             0.049546               0.273065                  0.906250                            7          48.201523

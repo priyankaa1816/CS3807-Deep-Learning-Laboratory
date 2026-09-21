@@ -1,0 +1,5 @@
+Configuration  Final Training Loss  Final Validation Loss  Best Validation Accuracy  Epoch of Best Val. Accuracy  Training Time (s)
+         zero             0.048022               0.250804                  0.921196                            6          56.555789
+       random             0.052764               0.284823                  0.903533                            8          48.604067
+       xavier             0.050603               0.271858                  0.907609                            6          48.451837
+           he             0.050014               0.277022                  0.902174                            7          47.799607
